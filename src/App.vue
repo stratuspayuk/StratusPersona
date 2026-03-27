@@ -74,17 +74,9 @@
 
   <hr class="section-divider">
 
-  <!-- Footer / Contact Section -->
-  <footer class="container center flex-col" style="padding: 80px 5%;">
-    <h2 style="font-size: 2.5rem; margin-bottom: 24px;">Ready to create your perfect persona?</h2>
-    <p class="lead" style="margin-bottom: 32px;">
-      Start building smarter AI agents today with StratusPersona.
-    </p>
-    <a href="mailto:aertislabsuk@gmail.com" class="btn btn-primary" style="margin-bottom: 60px;">
-      Get Started
-    </a>
-
-    <div class="footer-links" style="text-align: center; border-top: 1px solid #333; padding-top: 32px; width: 100%;">
+  <!-- Footer -->
+  <footer class="container center flex-col" style="padding: 60px 5%;">
+    <div class="footer-links" style="text-align: center; width: 100%;">
       <p style="margin: 0 0 16px 0; color: #666;">
         &copy; Aertis Labs UK, 2026. All rights reserved.
       </p>
