@@ -66,18 +66,18 @@
     <p class="lead" style="margin-bottom: 32px;">
       Start building smarter AI agents today with StratusPersona.
     </p>
-    <a href="mailto:hello@stratuspersona.com" class="btn btn-primary" style="margin-bottom: 60px;">
+    <a href="mailto:aertislabsuk@gmail.com" class="btn btn-primary" style="margin-bottom: 60px;">
       Get Started
     </a>
 
     <div class="footer-links" style="text-align: center; border-top: 1px solid #333; padding-top: 32px; width: 100%;">
       <p style="margin: 0 0 16px 0; color: #666;">
-        &copy; 2026 StratusPersona. All rights reserved.
+        &copy; Aertis Labs UK, 2026. All rights reserved.
       </p>
       <div style="display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; font-size: 0.9rem;">
         <a href="#" style="color: #888; text-decoration: none;">Terms & Conditions</a>
         <a href="#" style="color: #888; text-decoration: none;">Privacy Policy</a>
-        <a href="mailto:hello@stratuspersona.com" style="color: #888; text-decoration: none;">Contact</a>
+        <a href="mailto:aertislabsuk@gmail.com" style="color: #888; text-decoration: none;">Contact</a>
       </div>
     </div>
   </footer>
