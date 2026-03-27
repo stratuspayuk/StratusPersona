@@ -330,6 +330,40 @@ p.lead {
   font-size: 0.9rem;
 }
 
+/* Version Badge */
+.version-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+}
+
+.version-badge span:first-child {
+  font-size: 0.9rem;
+}
+
+.version-badge span:last-child {
+  font-size: 0.75rem;
+  margin-top: -4px;
+}
+
+@media (max-width: 600px) {
+  .version-badge {
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+  }
+  
+  .version-badge span:first-child {
+    font-size: 0.65rem;
+  }
+  
+  .version-badge span:last-child {
+    font-size: 0.55rem;
+    margin-top: 0;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .interface { margin-top: 20px; margin-bottom: 20px; }
