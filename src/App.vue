@@ -72,10 +72,8 @@
     </div>
   </section>
 
-  <hr class="section-divider">
-
   <!-- Footer -->
-  <footer class="container center flex-col" style="padding: 60px 5%;">
+  <footer class="container center flex-col" style="padding: 40px 5%;">
     <div class="footer-links" style="text-align: center; width: 100%;">
       <p style="margin: 0 0 16px 0; color: #666;">
         &copy; Aertis Labs UK, 2026. All rights reserved.
