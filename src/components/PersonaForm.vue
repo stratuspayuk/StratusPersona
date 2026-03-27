@@ -51,8 +51,8 @@
       <label>Creativity</label>
       <input type="range" min="1" max="5" step="1" v-model.number="persona.creativity" class="slider" />
       <div class="flex" style="justify-content: space-between; font-size: 0.75rem; color: #888;">
-        <span>Strongly Technical</span>
         <span>Strongly Creative</span>
+        <span>Strongly Technical</span>
       </div>
     </div>
 

@@ -7,7 +7,7 @@
         <span class="new-header-title">Stratus<span class="brand-highlight">Persona</span></span>
       </div>
       <div class="version-badge">
-        <span style="color: #666; font-family: var(--font-mono);">v1.0.0.5</span>
+        <span style="color: #666; font-family: var(--font-mono);">v1.0.0.6</span>
         <span style="color: #F7931A; font-family: var(--font-mono); font-weight: 600;">beta</span>
       </div>
     </div>
