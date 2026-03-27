@@ -164,10 +164,35 @@ const chartOptions = createOptions(11)
   border-radius: 16px;
   width: 90%;
   max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
   padding: 32px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(247, 147, 26, 0.2);
   position: relative;
   animation: slideUp 0.2s ease-out;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    padding: 24px;
+    max-height: 85vh;
+  }
+  .modal-content h2 {
+    font-size: 1.5rem;
+  }
+  .modal-details p {
+    font-size: 0.95rem;
+  }
+  .modal-details li {
+    font-size: 0.85rem;
+    padding: 12px;
+  }
+  .close-btn {
+    top: 16px;
+    right: 16px;
+    font-size: 1.5rem;
+  }
 }
 
 @keyframes slideUp {
