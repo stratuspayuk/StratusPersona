@@ -30,11 +30,46 @@ const props = defineProps({
 const generatedMarkdown = computed(() => {
   const p = props.persona;
 
-  const seriMap = { 1: 'Fun and Comedic', 2: 'Fun', 3: 'Balanced', 4: 'Serious', 5: 'Very Serious' };
-  const creaMap = { 1: 'Strongly Technical', 2: 'Technical', 3: 'Balanced', 4: 'Creative', 5: 'Strongly Creative' };
-  const chatMap = { 1: 'Verbose and Elaborate', 2: 'Detailed', 3: 'Balanced', 4: 'Concise', 5: 'Concise and Short' };
-  const autoMap = { 1: 'Strictly Reactive', 2: 'Reactive', 3: 'Balanced', 4: 'Proactive', 5: 'Highly Proactive' };
-  const rigiMap = { 1: 'Plain Text', 2: 'Light Markdown', 3: 'Balanced Layout', 4: 'Structured', 5: 'Highly Structured / Tables' };
+  // Detailed descriptions for each trait at each level
+  const creativityGuide = {
+    1: 'Strongly Technical & Logic-Focused\nPrioritize accuracy, logic, and technical correctness above all. Stick closely to facts, data, and established methods. Avoid creative interpretations unless explicitly required.',
+    2: 'Technical with Minor Creative Input\nMainly focus on logical, methodical approaches. Allow small creative touches when they enhance clarity or understanding, but default to proven techniques.',
+    3: 'Balanced Approach\nBlend technical accuracy with creative problem-solving. Feel free to suggest alternative approaches or innovative perspectives while maintaining correctness.',
+    4: 'Creative-Leaning\nEmbraces creative thinking and novel approaches. Suggest innovative solutions and fresh perspectives, but ensure they remain technically sound.',
+    5: 'Strongly Creative & Flexible\nPrioritize creative, innovative, and unconventional approaches. Encourage exploring new ideas and unique solutions. Focus on imagination while maintaining core validity.'
+  };
+
+  const seriousnessGuide = {
+    1: 'Fun and Comedic\nUse humor, jokes, and light-hearted commentary. Keep interactions playful and entertaining. Inject personality and wit into responses.',
+    2: 'Mostly Fun\nGeneral friendly and upbeat tone with occasional humor. Lighten the mood while still covering topics competently.',
+    3: 'Balanced\nMaintain a conversational, neutral tone. Mix professionalism with approachability. Be helpful without being overly formal or funny.',
+    4: 'Serious\nAdopt a professional, focused tone. Minimize humor and keep responses on-topic. Show competence and reliability.',
+    5: 'Very Serious & Formal\nUse formal language and professional demeanor. Avoid humor entirely. Present information with utmost gravity and precision.'
+  };
+
+  const chattinessGuide = {
+    1: 'Verbose and Elaborate\nProvide comprehensive, detailed explanations. Use examples, context, and thorough breakdowns. Err on the side of over-explaining rather than being brief.',
+    2: 'Detailed\nOfffer good detail and explanation but avoid unnecessary verbosity. Provide context and supporting information naturally.',
+    3: 'Balanced\nMatch response length to the complexity of the question. Be clear without being overly wordy or too terse.',
+    4: 'Concise\nStay focused and direct. Remove unnecessary words and details. Get to the point efficiently.',
+    5: 'Concise and Short\nMinimize words and get directly to the answer. Ultra-brief responses. Short, punchy communication style.'
+  };
+
+  const autonomyGuide = {
+    1: 'Strictly Reactive\nOnly respond when asked. Wait for explicit direction or questions. Never volunteer unsolicited suggestions or proactive actions.',
+    2: 'Mostly Reactive\nPrimarily respond to requests, but offer minor suggestions when highly relevant. Default to waiting for direction.',
+    3: 'Balanced\nRespond to requests while occasionally suggesting related actions or next steps. Take initiative when context warrants it.',
+    4: 'Proactive\nFrequently suggest next steps, related topics, or actions. Anticipate user needs and offer guidance without waiting for explicit requests.',
+    5: 'Highly Proactive\nConstantly suggest improvements, alternatives, and next steps. Take initiative and drive conversations forward. Anticipate needs before they\'re expressed.'
+  };
+
+  const rigidityGuide = {
+    1: 'Plain Text Format\nRespond entirely in plain text with no special formatting. Minimal structure—straightforward paragraphs and simple lists.',
+    2: 'Light Markdown\nUse basic Markdown formatting (bold, italics, simple lists) to enhance readability. Keep structure minimal.',
+    3: 'Balanced Layout\nUse moderate Markdown formatting with headers, lists, and emphasis. Organize content clearly without excessive structure.',
+    4: 'Structured Output\nUse comprehensive Markdown formatting including headers, nested lists, code blocks, and emphasis. Organize content in a well-defined structure.',
+    5: 'Highly Structured with Tables & Advanced Formatting\nUse advanced Markdown features including tables, code blocks, nested structures, and complex formatting. Present information in precise, structured layouts.'
+  };
 
   const specialism = p.specialisms && p.specialisms.length > 0 
     ? `\n## Specialisms\n${p.specialisms.map(s => `- ${s}`).join('\n')}` 
@@ -49,11 +84,26 @@ ${p.role || 'Not specified'}${specialism}
 ${p.background || 'Not specified'}
 
 ## Behavior & Style
-- **Creativity**: ${creaMap[p.creativity] || 'Balanced'} (${p.creativity}/5)
-- **Seriousness**: ${seriMap[p.seriousness] || 'Balanced'} (${p.seriousness}/5)
-- **Chattiness**: ${chatMap[p.chattiness] || 'Balanced'} (${p.chattiness}/5)
-- **Autonomy**: ${autoMap[p.autonomy] || 'Balanced'} (${p.autonomy}/5)
-- **Rigidity**: ${rigiMap[p.rigidity] || 'Balanced Layout'} (${p.rigidity}/5)
+
+### Creativity
+**Setting: ${p.creativity}/5**
+${creativityGuide[p.creativity] || 'Balanced approach'}
+
+### Seriousness
+**Setting: ${p.seriousness}/5**
+${seriousnessGuide[p.seriousness] || 'Balanced tone'}
+
+### Chattiness
+**Setting: ${p.chattiness}/5**
+${chattinessGuide[p.chattiness] || 'Balanced verbosity'}
+
+### Autonomy
+**Setting: ${p.autonomy}/5**
+${autonomyGuide[p.autonomy] || 'Balanced initiative'}
+
+### Rigidity
+**Setting: ${p.rigidity}/5**
+${rigidityGuide[p.rigidity] || 'Balanced formatting'}
 
 ## Constraints & Rules
 ${p.constraints || 'Not specified'}
