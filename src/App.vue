@@ -13,12 +13,26 @@
     </div>
   </nav>
 
-  <header class="container" style="margin-top: 40px; text-align: center;">
-    <h1>Create your <span class="brand-highlight">AI Agent</span> Persona</h1>
-    <p class="lead" style="margin-bottom: 0;">Fill in the configuration details below to effortlessly generate an optimized markdown persona file.</p>
+  <!-- Hero Section -->
+  <header class="hero container center flex-col">
+    <h1 style="text-shadow: 0 8px 24px rgba(0,0,0,1); margin-bottom: 16px;">
+      Define your <span class="brand-highlight">AI Agent</span> Persona<br>
+      with <span class="brand-highlight">Precision</span>
+    </h1>
+    <p class="lead" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8); color: #ccc; margin-bottom: 32px;">
+      Craft intelligent, consistent personas that guide your AI agents to deliver superior interactions and outcomes.
+    </p>
+    <div class="flex" style="justify-content: center;">
+      <button @click="scrollToDashboard" class="btn btn-primary">
+        Start Creating
+      </button>
+    </div>
   </header>
 
-  <section class="container">
+  <!-- Orange Border -->
+  <div class="orange-divider"></div>
+
+  <section class="container" id="dashboard-section">
     <div class="interface">
       <PersonaForm v-model="personaState" />
       <MarkdownPreview :persona="personaState" />
@@ -100,4 +114,11 @@ const personaState = reactive({
   rigidity: 3,
   constraints: ''
 })
+
+const scrollToDashboard = () => {
+  const element = document.getElementById('dashboard-section')
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 </script>

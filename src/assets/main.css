@@ -155,6 +155,34 @@ input:focus, select:focus, textarea:focus {
 .new-header-title { font-weight: 700; font-size: 1.1rem; color: #FFFFFF; }
 .brand-highlight { color: var(--primary); }
 
+/* Hero Section */
+.hero {
+  padding: 120px 5% 80px 5%;
+  position: relative;
+  overflow: hidden;
+  background: #0D0E10;
+  margin-top: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 5% 50px 5%;
+  }
+}
+
+/* Orange Divider */
+.orange-divider {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #F7931A, transparent);
+  margin: 40px 0;
+}
+
 /* Section Divider */
 .section-divider {
   border: none;
