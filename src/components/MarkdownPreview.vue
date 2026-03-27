@@ -36,10 +36,14 @@ const generatedMarkdown = computed(() => {
   const autoMap = { 1: 'Strictly Reactive', 2: 'Reactive', 3: 'Balanced', 4: 'Proactive', 5: 'Highly Proactive' };
   const rigiMap = { 1: 'Plain Text', 2: 'Light Markdown', 3: 'Balanced Layout', 4: 'Structured', 5: 'Highly Structured / Tables' };
 
+  const specialism = p.specialisms && p.specialisms.length > 0 
+    ? `\n## Specialisms\n${p.specialisms.map(s => `- ${s}`).join('\n')}` 
+    : '';
+
   return `# Persona: ${p.name || 'Unnamed Agent'}
 
 ## Role
-${p.role || 'Not specified'}
+${p.role || 'Not specified'}${specialism}
 
 ## Additional Context
 ${p.background || 'Not specified'}

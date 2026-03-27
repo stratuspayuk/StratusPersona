@@ -33,6 +33,7 @@ import MarkdownPreview from './components/MarkdownPreview.vue'
 const personaState = reactive({
   name: '',
   role: '',
+  specialisms: [],
   background: '',
   seriousness: 3,
   creativity: 3,
