@@ -1,9 +1,9 @@
 <template>
   <nav class="new-sticky-header">
     <div class="container new-sticky-header-inner">
-      <div class="flex" style="gap: 16px;">
-        <!-- Placeholder for logo, mimicking StratusPayExplorer -->
-        <div style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--primary); background-color: var(--surface); display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--primary);">SP</div>
+      <div class="flex" style="gap: 16px; align-items: center;">
+        <!-- Logo -->
+        <img src="@/assets/logo.png" alt="StratusPersona Logo" style="height: 40px; width: auto;" />
         <span class="new-header-title">Stratus<span class="brand-highlight">Persona</span></span>
       </div>
       <div class="flex" style="gap: 24px;">
