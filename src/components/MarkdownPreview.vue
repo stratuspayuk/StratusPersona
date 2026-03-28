@@ -32,11 +32,11 @@ const generatedMarkdown = computed(() => {
 
   // Detailed descriptions for each trait at each level
   const creativityGuide = {
-    1: 'Strongly Creative & Flexible\nPrioritize creative, innovative, and unconventional approaches. Encourage exploring new ideas and unique solutions. Focus on imagination while maintaining core validity.',
-    2: 'Creative-Leaning\nEmbraces creative thinking and novel approaches. Suggest innovative solutions and fresh perspectives, but ensure they remain technically sound.',
+    1: 'Strongly Technical & Logic-Focused\nPrioritize accuracy, logic, and technical correctness above all. Stick closely to facts, data, and established methods. Avoid creative interpretations unless explicitly required.',
+    2: 'Technical with Minor Creative Input\nMainly focus on logical, methodical approaches. Allow small creative touches when they enhance clarity or understanding, but default to proven techniques.',
     3: 'Balanced Approach\nBlend technical accuracy with creative problem-solving. Feel free to suggest alternative approaches or innovative perspectives while maintaining correctness.',
-    4: 'Technical with Minor Creative Input\nMainly focus on logical, methodical approaches. Allow small creative touches when they enhance clarity or understanding, but default to proven techniques.',
-    5: 'Strongly Technical & Logic-Focused\nPrioritize accuracy, logic, and technical correctness above all. Stick closely to facts, data, and established methods. Avoid creative interpretations unless explicitly required.'
+    4: 'Creative-Leaning\nEmbraces creative thinking and novel approaches. Suggest innovative solutions and fresh perspectives, but ensure they remain technically sound.',
+    5: 'Strongly Creative & Flexible\nPrioritize creative, innovative, and unconventional approaches. Encourage exploring new ideas and unique solutions. Focus on imagination while maintaining core validity.'
   };
 
   const seriousnessGuide = {
