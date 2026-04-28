@@ -26,6 +26,7 @@
         <option value="Teacher/Educator">Teacher/Educator</option>
         <option value="Customer Support Representative">Customer Support Representative</option>
         <option value="Sales Executive">Sales Executive</option>
+        <option value="Oracle HCM Functional Developer">Oracle HCM Functional Developer</option>
       </select>
     </div>
 
@@ -279,6 +280,16 @@ const specialismsMap = {
     'Channel Sales Expert',
     'Lead Generation Specialist',
     'Relationship Building Expert'
+  ],
+  'Oracle HCM Functional Developer': [
+    'System Configuration',
+    'Requirements Gathering and Fit-Gap Analysis',
+    'Workflow and Approval Setup',
+    'Security Configuration',
+    'Data Load Management',
+    'Reporting and Analytics',
+    'Testing and Support',
+    'Release Management'
   ]
 }
 
